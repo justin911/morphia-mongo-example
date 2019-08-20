@@ -9,6 +9,8 @@ import dev.morphia.query.UpdateResults;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Value;
 
+import java.util.List;
+
 /**
  * This class is used in the Quick Tour documentation and is used to demonstrate various Morphia features.
  */
@@ -54,6 +56,8 @@ public final class QuickTour {
 
         Query<Employee> query = datastore.find(Employee.class);
         final long employees = query.count();
+
+        final List<Employee> result = query.asList();
 
         Assert.assertEquals(3, employees);
 

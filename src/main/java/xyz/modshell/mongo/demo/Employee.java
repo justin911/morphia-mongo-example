@@ -21,7 +21,7 @@ public class Employee {
     private Employee manager;
     @Reference
     private List<Employee> directReports = new ArrayList<Employee>();
-    @Property("wage")
+//    @Property("wage")
     private Double salary;
 
     Employee() {
